@@ -2,6 +2,9 @@ import React from "react";
 import "../styles/sidebar.css";
 import SidebarOption from "./SidebarOption";
 function Sidebar() {
+    const showNewPost = () => {
+        
+    }
     return (
         <div className="sidebar">
            
@@ -13,10 +16,11 @@ function Sidebar() {
             <SidebarOption text="Lists" />
             <SidebarOption text="Profile" />
             <SidebarOption  text="More" />
+           
+            <button onClick={showNewPost} type='submit'className="sidebar__post" >
+                New Post
+                </button>
 
-            <button type='submit'className="sidebar__post" >
-                What's Up?
-            </button>
         </div>
     );
 }
