@@ -1,9 +1,16 @@
-import React from "react";
+import {React, useState} from "react";
 import "../styles/sidebar.css";
+import {Button, Modal} from "react-bootstrap"
 import SidebarOption from "./SidebarOption";
-function Sidebar() {
+import NewPost from "./NewPost";
+function Sidebar(props) {
+
+    const [isOpen, setIsOpen] = useState(false);
     const showNewPost = () => {
-        
+        setIsOpen(true);
+    }
+    const hideNewPost = () => {
+        setIsOpen(false);
     }
     return (
         <div className="sidebar">
@@ -17,9 +24,21 @@ function Sidebar() {
             <SidebarOption text="Profile" />
             <SidebarOption  text="More" />
            
-            <button onClick={showNewPost} type='submit'className="sidebar__post" >
+            <Button onClick={showNewPost} type='submit'className="sidebar__post" >
                 New Post
-                </button>
+            </Button>
+            <Modal show={isOpen} onHide={hideNewPost}>
+                <Modal.Header closeButton>
+                    <Modal.Title>New Post</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                <NewPost/>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={hideNewPost}>CANCEL</Button>
+                    <Button variant='primary' onClick={hideNewPost}>OK</Button>
+                </Modal.Footer>
+            </Modal>
 
         </div>
     );

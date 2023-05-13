@@ -1,7 +1,7 @@
-import {Card,Button} from 'react-bootstrap';
+import {Card} from 'react-bootstrap';
 
 import React, { Component } from 'react'
-import PostControls from './PostControl';
+
 export default class Post extends Component {
     constructor(props) {
       super(props)
@@ -18,11 +18,13 @@ export default class Post extends Component {
             <Card.Header>
                 
             </Card.Header>
+            <Card.Img>
+              {this.props.postImage}
+            </Card.Img>
             <Card.Body>
-                    
+                  {this.props.postContent}  
             </Card.Body>
             <Card.Footer>
-            <PostControls id={this.state.id}/>
             </Card.Footer>
         </Card>
       </>
