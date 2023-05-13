@@ -1,0 +1,16 @@
+.postHeader {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px;
+  padding: 10px;
+}
+
+.user-displayName {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.userName{
+  font-weight:600;
+}

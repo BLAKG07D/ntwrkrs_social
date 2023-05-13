@@ -1,17 +1,20 @@
 import {React} from 'react'
 import PostImage from './PostImage'
-// import '../../styles/post/header'
+import '../../styles/post/header.css'
 const PostHeader = props => { 
 
   return (
-    <div>
+    <div className = 'postHeader'>
      <PostImage/>
-     <h4 className='user-displayName'>
+     <div className='user-displayName'>
+     <h4>
         {props.displayName}
      </h4>
      <span className='userName'>
-        @{props.username}
+       @{props.userName}
      </span>
+     </div>
+     
     </div>
   )
 }

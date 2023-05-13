@@ -1,7 +1,10 @@
 import {Card} from 'react-bootstrap';
 
 import React, { Component } from 'react'
-
+import PostContent from './post/PostContent';
+import PostImage from './post/PostImage';
+import PostHeader from './post/PostHeader';
+import PostFooter from './post/PostFooter';
 export default class Post extends Component {
     constructor(props) {
       super(props)
@@ -16,15 +19,15 @@ export default class Post extends Component {
       <>
         <Card>
             <Card.Header>
-                
+                <PostHeader displayName={"Robert Armstrong"} userName={'blakgold'}/>
             </Card.Header>
-            <Card.Img>
-              {this.props.postImage}
-            </Card.Img>
+           
+         
             <Card.Body>
-                  {this.props.postContent}  
+                  <PostContent/>  
             </Card.Body>
             <Card.Footer>
+              <PostFooter/>
             </Card.Footer>
         </Card>
       </>

@@ -1,9 +1,10 @@
 import React from 'react'
-import PostHeader from './PostHeader'
+import Content from '../post/Content'
+import '../../styles/post/content.css'
 export default function PostContent() {
   return (
-    <div>
-      <PostHeader username={"blakg07d"} displayName={"Robert Armstrong"} />
+    <div className='postContent'>
+      <Content/>
     </div>
   )
 }
