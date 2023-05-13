@@ -1,5 +1,6 @@
 import React from 'react'
 import { ListGroup } from 'react-bootstrap'
+import PostContent from './post/PostContent'
 export default function PostsSection() {
     let postArray = [
         {
@@ -29,7 +30,9 @@ export default function PostsSection() {
     <div>
       <ListGroup >
         {postArray.map(post => (
-          <ListGroup.Item key={post.id}>{post.title}</ListGroup.Item>
+          <ListGroup.Item key={post.id}>
+            <PostContent/>
+            </ListGroup.Item>
         ))}
       </ListGroup>
     </div>
