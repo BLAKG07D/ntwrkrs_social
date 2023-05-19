@@ -10,6 +10,10 @@ export default function PostsSection() {
             title:"second post Tiltle",
             id:2
         },
+        {
+          title:"third post title",
+          id:3
+        }
     ]
   return (
     /*
