@@ -12,6 +12,7 @@
 .sidebar {
   border-right: 1px solid var(--app-color);
   display:flex;
+  flex-direction: column;
   flex-wrap: wrap;
   flex-shrink: inherit;
   min-width: 250px;
