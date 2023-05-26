@@ -1,0 +1,22 @@
+.profile-page {
+    background-color: #3F51B5;
+    color: white;
+    font-family: sans-serif;
+    padding: 20px;
+  }
+  
+  .profile-header {
+    border-bottom: 1px solid #E0E0E0;
+    border-top: 1px solid #E0E0E0;
+    margin-top:20px;
+  }
+  
+  .profile-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .profile-bio {
+    margin-top: 10px;
+    font-size: 16px;
+  }
