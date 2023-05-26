@@ -6,7 +6,6 @@ class Profile extends Component {
   state = {
     user: {
       name: 'Robert Armstrong',
-      profileImage: 'https://twitter.com/blakg07d/photo',
       bio: 'Fullstack developer | Web developer | Mobile developer | Fullstack developer | Web developer | Mobile developer | Fullstack developer |',
     },
   };
