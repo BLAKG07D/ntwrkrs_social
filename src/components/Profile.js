@@ -6,7 +6,7 @@ class Profile extends Component {
   state = {
     user: {
       name: 'Robert Armstrong',
-      bio: 'Fullstack developer | Web developer | Mobile developer | Fullstack developer | Web developer | Mobile developer | Fullstack developer |',
+      bio:this.props.bio||" Add a bio"
     },
   };
 

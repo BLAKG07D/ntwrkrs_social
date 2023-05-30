@@ -7,6 +7,7 @@ import {Routes,Route} from "react-router-dom"
 
 import PostsSection from './components/PostsSection';
 function App() {
+ 
   return (
     
     <div className="App">
