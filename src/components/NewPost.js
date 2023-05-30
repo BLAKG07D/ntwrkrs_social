@@ -32,12 +32,11 @@ function NewPost(props) {
         })
     }
     const sendPost = (e) => {
-       
+       e.preventDefault();
         setNewPost(e.target.value);
         setFinalPost(newPost)
         setNewPost("");
         setPostImage("");
-        e.preventDefault();
         setLikes(0);
         setPostedAt(e.data.postedAt);
         setCommentCount(0)

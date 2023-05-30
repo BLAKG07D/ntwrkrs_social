@@ -28,8 +28,8 @@ export default class Post extends Component {
             </Card.Body>
             <Card.Footer>
               <PostFooter/>
-              <PostImpressions/>
-            </Card.Footer>
+            <PostImpressions/>
+            </Card.Footer  >
         </Card>
       </>
     )
