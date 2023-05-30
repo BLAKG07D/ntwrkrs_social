@@ -2,22 +2,50 @@
 import React, { useState } from "react";
 import {Button,Form} from 'react-bootstrap'
 import "../styles/newPost.css";
-
+import axios from "axios"
 import Post from "../components/Post";
-function NewPost() {
+function NewPost(props) {
     const [newPost, setNewPost] = useState("");
     const [postImage, setPostImage] = useState("");
     const [finalPost, setFinalPost] = useState("");
+    const [likes, setLikes] = useState("0");
+    const [postedAt, setPostedAt] = useState("");
+    const [commentCount, setCommentCount] = useState("0");
+    const [ repost, setRepostCount] = useState("0");
+    const [ quotePost, setQuotePostCount] = useState("0");
+        let post = {
+        postAuthor:props.user.name,
+        postContent:finalPost,
+        postDate:postedAt,
+        postLikes:likes,
+        postCommentCount:commentCount,
+        repostCount:repost,
+        quotePostCount:quotePost,    
+    }
+    
+    const handleSend=()=>{
+        const url = "http://localhost:3001/new/post";
+        let data = post;
+        
+        axios.post(url, data,async(res)=>{
+            await res.data;
+        })
+    }
     const sendPost = (e) => {
-        e.preventDefault();
-
-      
+       
         setNewPost(e.target.value);
         setFinalPost(newPost)
         setNewPost("");
         setPostImage("");
-    };
-
+        e.preventDefault();
+        setLikes(0);
+        setPostedAt(e.data.postedAt);
+        setCommentCount(0)
+        setRepostCount(0);
+        setQuotePostCount(0);
+      handleSend()
+    }
+    
     return (
         <div className="postBox">
             <Form>
